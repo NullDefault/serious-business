@@ -4,8 +4,10 @@ import {
   Heading,
   Stack,
   Text,
-  Button,
+  chakra,
 } from "@chakra-ui/react";
+import { motion } from "framer-motion";
+
 import { Illustration } from "./bellsAndWhistles/Illustration";
 
 export default function CallToActionWithIllustration() {
@@ -14,43 +16,92 @@ export default function CallToActionWithIllustration() {
       <Stack
         textAlign={"center"}
         align={"center"}
-        spacing={{ base: 8, md: 10 }}
-        py={{ base: 20, md: 28 }}
+        spacing={{ base: 6, md: 8 }}
+        py={{ base: 6, md: 12 }}
       >
         <Heading
           fontWeight={600}
           fontSize={{ base: "3xl", sm: "4xl", md: "6xl" }}
           lineHeight={"110%"}
         >
-          Meeting scheduling{" "}
+          Do you{" "}
           <Text as={"span"} color={"orange.400"}>
-            made easy
+            fucking hate{" "}
+          </Text>
+          dogs?
+        </Heading>
+        <Text color={"gray.500"} fontSize={{ base: "md", sm: "lg", md: "xl" }}>
+          Do you enjoy the prestige of owning a living being, but hate{" "}
+          <Text as={"span"} color={"blue.400"}>
+            the responsibility
+          </Text>{" "}
+          of having to take care of one?
+          <br /> Do your children no longer speak to you, and you crave
+          connection to something,{" "}
+          <Text as={"span"} color={"red.400"}>
+            literally anything
+          </Text>
+          ? <br />
+          Do you believe that man is superior to nature,{" "}
+          <Text as={"span"} color={"yellow.500"}>
+            imbued with divine right
+          </Text>{" "}
+          to mold it to his will?
+        </Text>
+        <Heading
+          fontWeight={600}
+          fontSize={{ base: "2xl", sm: "3xl", md: "4xl" }}
+          lineHeight={"110%"}
+        >
+          <Text as={"span"} color={"orange.400"}>
+            You are in the right place!
           </Text>
         </Heading>
-        <Text color={"gray.500"} maxW={"3xl"}>
-          Never miss a meeting. Never be late for one too. Keep track of your
-          meetings and receive smart reminders in appropriate times. Read your
-          smart “Daily Agenda” every morning.
-        </Text>
-        <Stack spacing={6} direction={"row"}>
-          <Button
-            rounded={"full"}
-            px={6}
-            colorScheme={"orange"}
-            bg={"orange.400"}
-            _hover={{ bg: "orange.500" }}
+        <Flex w={"full"} position="relative">
+          <chakra.div
+            fontSize={"xl"}
+            position={"absolute"}
+            left="10%"
+            top={{ base: "0%", md: "10%" }}
+            color="blue.500"
           >
-            Get started
-          </Button>
-          <Button rounded={"full"} px={6}>
-            Learn more
-          </Button>
-        </Stack>
-        <Flex w={"full"}>
+            <motion.div
+              initial={{ rotate: 4 }}
+              animate={{ rotate: -12 }}
+              transition={{
+                type: "spring",
+                damping: 30,
+                repeat: Infinity,
+                repeatType: "reverse",
+              }}
+            >
+              I Love Money!
+            </motion.div>
+          </chakra.div>
           <Illustration
             height={{ sm: "24rem", lg: "28rem" }}
-            mt={{ base: 12, sm: 16 }}
+            mt={{ base: 8, sm: 12 }}
           />
+          <chakra.div
+            fontSize={"xl"}
+            position={"absolute"}
+            right="10%"
+            top={{ base: "0%", md: "10%" }}
+            color="orange.400"
+          >
+            <motion.div
+              initial={{ rotate: 4 }}
+              animate={{ rotate: 12 }}
+              transition={{
+                type: "spring",
+                damping: 30,
+                repeat: Infinity,
+                repeatType: "reverse",
+              }}
+            >
+              Dumb Animal!
+            </motion.div>
+          </chakra.div>
         </Flex>
       </Stack>
     </Container>

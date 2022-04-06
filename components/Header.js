@@ -15,6 +15,7 @@ import {
   useColorMode,
   Center,
 } from "@chakra-ui/react";
+import Logo from "./bellsAndWhistles/dogIoLogo";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 const NavLink = ({ children }) => (
@@ -37,9 +38,11 @@ export default function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
-        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-          <Box>Logo</Box>
+      <Box px={6} py={1}>
+        <Flex h={20} alignItems={"center"} justifyContent={"space-between"}>
+          <Box h="90%">
+            <Logo />
+          </Box>
 
           <Flex alignItems={"center"}>
             <Stack direction={"row"} spacing={7}>
@@ -48,17 +51,8 @@ export default function Header() {
               </Button>
 
               <Menu>
-                <MenuButton
-                  as={Button}
-                  rounded={"full"}
-                  variant={"link"}
-                  cursor={"pointer"}
-                  minW={0}
-                >
-                  <Avatar
-                    size={"sm"}
-                    src={"https://avatars.dicebear.com/api/male/username.svg"}
-                  />
+                <MenuButton as={Button} cursor={"pointer"} minW={0}>
+                  Menu
                 </MenuButton>
                 <MenuList alignItems={"center"}>
                   <br />

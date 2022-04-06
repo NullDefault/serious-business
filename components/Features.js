@@ -38,7 +38,7 @@ export default function FeaturesSplitWithImage() {
   return (
     <Container maxW={"5xl"} py={12}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-        <Stack spacing={4}>
+        <Stack spacing={4} key="features-stack">
           <Text
             textTransform={"uppercase"}
             color={"blue.400"}
@@ -85,7 +85,7 @@ export default function FeaturesSplitWithImage() {
             />
           </Stack>
         </Stack>
-        <Flex>
+        <Flex key="features-flex">
           <Image
             rounded={"md"}
             alt={"feature image"}

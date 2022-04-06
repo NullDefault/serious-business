@@ -163,7 +163,11 @@ export default function TestimonialGrid() {
         mx={"auto"}
       >
         {testimonials.map((cardInfo, index) => (
-          <TestimonialCard {...cardInfo} index={index} />
+          <TestimonialCard
+            {...cardInfo}
+            index={index}
+            key={"testimonial-grid-item-" + index}
+          />
         ))}
       </SimpleGrid>
       <Box>
