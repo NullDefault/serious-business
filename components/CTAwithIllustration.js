@@ -26,7 +26,7 @@ export default function CallToActionWithIllustration() {
         >
           Do you{" "}
           <Text as={"span"} color={"orange.400"}>
-            fucking hate{" "}
+            absolutely hate{" "}
           </Text>
           dogs?
         </Heading>
