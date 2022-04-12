@@ -5,10 +5,11 @@ import {
   Stack,
   Text,
   chakra,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
-import { Illustration } from "./bellsAndWhistles/Illustration";
+import { Illustration } from "./aesthetics/Illustration";
 
 export default function CallToActionWithIllustration() {
   return (
@@ -30,7 +31,10 @@ export default function CallToActionWithIllustration() {
           </Text>
           dogs?
         </Heading>
-        <Text color={"gray.500"} fontSize={{ base: "md", sm: "lg", md: "xl" }}>
+        <Text
+          color={useColorModeValue("gray.900", "gray.200")}
+          fontSize={{ base: "md", sm: "lg", md: "xl" }}
+        >
           Do you enjoy the prestige of owning a living being, but hate{" "}
           <Text as={"span"} color={"blue.400"}>
             the responsibility

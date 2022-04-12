@@ -4,12 +4,13 @@ import { OrbitControls } from "@react-three/drei";
 import GltfModel from "./GltfModel";
 
 const ModelViewer = ({
-  modelPath,
+  model,
   scale = 40,
   position = [0, 0, 0],
+  rotation = [0, 0, 0],
   enableHoverEnlarge = false,
   enableOrbitControls = false,
-  rotationAxis = "y"
+  rotationAxes = [],
 }) => {
   return (
     <Canvas>
@@ -18,11 +19,12 @@ const ModelViewer = ({
       <pointLight position={[-10, -10, -10]} />
       <Suspense fallback={null}>
         <GltfModel
-          modelPath={modelPath}
+          model={model}
           scale={scale}
           position={position}
+          rotation={rotation}
           enableHoverEnlarge={enableHoverEnlarge}
-          rotationAxis={rotationAxis}
+          rotationAxes={rotationAxes}
         />
         {enableOrbitControls && <OrbitControls />}
       </Suspense>
