@@ -1,3 +1,7 @@
+/*
+Mesh data extracted with: https://github.com/pmndrs/gltfjsx
+*/
+
 const meshData = {
   dumbdog: (nodes, materials) => {
     return {
