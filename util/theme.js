@@ -8,6 +8,12 @@ const colors = {
   },
 };
 
-const theme = extendTheme({ colors });
+const theme = extendTheme({
+  colors,
+  fonts: {
+    heading: "Secular One",
+    body: "Secular One",
+  },
+});
 
 export default theme;
