@@ -10,7 +10,7 @@ const ModelViewer = ({
   rotation = [0, 0, 0],
   enableHoverEnlarge = false,
   enableOrbitControls = false,
-  rotationAxis = "y",
+  rotationAxes = [],
 }) => {
   return (
     <Canvas>
@@ -24,7 +24,7 @@ const ModelViewer = ({
           position={position}
           rotation={rotation}
           enableHoverEnlarge={enableHoverEnlarge}
-          rotationAxis={rotationAxis}
+          rotationAxes={rotationAxes}
         />
         {enableOrbitControls && <OrbitControls />}
       </Suspense>

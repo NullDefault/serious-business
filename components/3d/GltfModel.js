@@ -8,7 +8,7 @@ const GltfModel = ({
   scale = 1,
   position = [0, 0, 0],
   rotation = [0, 0, 0],
-  rotationAxis = "y",
+  rotationAxes = [],
 }) => {
   const ref = useRef();
   const { nodes, materials } = useLoader(
@@ -17,7 +17,9 @@ const GltfModel = ({
   );
 
   // Subscribe this component to the render-loop, rotate the mesh every frame
-  useFrame((state, delta) => (ref.current.rotation[rotationAxis] += 0.003));
+  rotationAxes.indexOf("x") != -1 && useFrame((state, delta) => (ref.current.rotation.x += 0.003));
+  rotationAxes.indexOf("y") != -1 && useFrame((state, delta) => (ref.current.rotation.y += 0.003));
+  rotationAxes.indexOf("z") != -1 && useFrame((state, delta) => (ref.current.rotation.z += 0.003));
 
   return (
     <>
