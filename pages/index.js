@@ -17,19 +17,19 @@ export default function Home() {
       <Flex h="800px">
         <ModelViewer
           scale=".1"
-          modelPath={"/models/dumbdog.glb"}
+          model={"dumbdog"}
           position={[0, 0, 0]}
           rotation={[0.19, 0.03, -0.04]}
         />
         <ModelViewer
           scale=".1"
-          modelPath={"/models/dumbdog.glb"}
+          model={"dumbdog"}
           position={[0, 0, 0]}
           rotation={[0.19, 0.03, -0.04]}
         />
         <ModelViewer
           scale=".1"
-          modelPath={"/models/dumbdog.glb"}
+          model={"dumbdog"}
           position={[0, 0, 0]}
           rotation={[0.19, 0.03, -0.04]}
         />

@@ -4,7 +4,7 @@ import { OrbitControls } from "@react-three/drei";
 import GltfModel from "./GltfModel";
 
 const ModelViewer = ({
-  modelPath,
+  model,
   scale = 40,
   position = [0, 0, 0],
   rotation = [0, 0, 0],
@@ -19,7 +19,7 @@ const ModelViewer = ({
       <pointLight position={[-10, -10, -10]} />
       <Suspense fallback={null}>
         <GltfModel
-          modelPath={modelPath}
+          model={model}
           scale={scale}
           position={position}
           rotation={rotation}
