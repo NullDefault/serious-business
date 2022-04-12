@@ -16,9 +16,22 @@ export default function Home() {
       <CallToActionWithIllustration />
       <Flex h="800px">
         <ModelViewer
-          scale=".15"
+          scale=".1"
           modelPath={"/models/dumbdog.glb"}
           position={[0, 0, 0]}
+          rotation={[0.19, 0.03, -0.04]}
+        />
+        <ModelViewer
+          scale=".1"
+          modelPath={"/models/dumbdog.glb"}
+          position={[0, 0, 0]}
+          rotation={[0.19, 0.03, -0.04]}
+        />
+        <ModelViewer
+          scale=".1"
+          modelPath={"/models/dumbdog.glb"}
+          position={[0, 0, 0]}
+          rotation={[0.19, 0.03, -0.04]}
         />
       </Flex>
       <Footer />
