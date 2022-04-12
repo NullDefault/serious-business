@@ -9,6 +9,13 @@ const meshData = {
       material: materials._10680_Dog_v2default,
     };
   },
+  longdog: (nodes, materials) => {
+    return {
+      geometry: nodes.tacskó17.geometry,
+      material: materials["(null)"],
+    };
+  },
 };
 
 export default meshData;
+ 

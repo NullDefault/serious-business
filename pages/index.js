@@ -17,24 +17,17 @@ export default function Home() {
       <Flex h="800px">
         <ModelViewer
           scale=".1"
-          rotationAxes={"y"}
+          rotationAxes="y"
           model={"dumbdog"}
-          position={[0, 0, 0]}
+          position={[0, -12.79, 0]}
           rotation={[0.19, 0.03, 0]}
         />
         <ModelViewer
-          scale=".1"
+          scale=".8"
           rotationAxes="y"
-          model={"dumbdog"}
-          position={[0, 0, 0]}
-          rotation={[0.19, 0.03, 0]}
-        />
-        <ModelViewer
-          scale=".1"
-          rotationAxes="y"
-          model={"dumbdog"}
-          position={[0, 0, 0]}
-          rotation={[0.19, 0.03, 0]}
+          model={"longdog"}
+          position={[0, -0.5, 0]}
+          rotation={[1.42, 0, 0]}
         />
       </Flex>
       <Footer />
