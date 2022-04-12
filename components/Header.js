@@ -15,7 +15,7 @@ import {
   useColorMode,
   Center,
 } from "@chakra-ui/react";
-import Logo from "./bellsAndWhistles/dogIoLogo";
+import Logo from "./aesthetics/dogIoLogo";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 const NavLink = ({ children }) => (

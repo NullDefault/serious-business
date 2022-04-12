@@ -9,7 +9,7 @@ import {
   Tag,
   useColorModeValue,
 } from "@chakra-ui/react";
-import Logo from "./bellsAndWhistles/dogIoLogo";
+import Logo from "./aesthetics/dogIoLogo";
 
 const ListHeader = ({ children }) => {
   return (

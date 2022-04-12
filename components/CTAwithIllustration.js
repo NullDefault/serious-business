@@ -8,7 +8,7 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
-import { Illustration } from "./bellsAndWhistles/Illustration";
+import { Illustration } from "./aesthetics/Illustration";
 
 export default function CallToActionWithIllustration() {
   return (

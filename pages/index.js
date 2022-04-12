@@ -2,8 +2,8 @@ import { Flex, useColorModeValue } from "@chakra-ui/react";
 import CallToActionWithIllustration from "../components/CTAwithIllustration";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import ModelViewer from "../components/bellsAndWhistles/ModelViewer";
-import { Background } from "../components/bellsAndWhistles/backgroundManager";
+import ModelViewer from "../components/3d/ModelViewer";
+import { Background } from "../components/aesthetics/backgroundManager";
 
 export default function Home() {
   return (
