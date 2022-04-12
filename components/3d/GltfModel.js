@@ -17,9 +17,11 @@ const GltfModel = ({
   );
 
   // Subscribe this component to the render-loop, rotate the mesh every frame
-  rotationAxes.indexOf("x") != -1 && useFrame((state, delta) => (ref.current.rotation.x += 0.003));
-  rotationAxes.indexOf("y") != -1 && useFrame((state, delta) => (ref.current.rotation.y += 0.003));
-  rotationAxes.indexOf("z") != -1 && useFrame((state, delta) => (ref.current.rotation.z += 0.003));
+  useFrame((state, delta) => {
+    rotationAxes.indexOf("x") != -1 && (ref.current.rotation.x += 0.003);
+    rotationAxes.indexOf("y") != -1 && (ref.current.rotation.y += 0.003);
+    rotationAxes.indexOf("z") != -1 && (ref.current.rotation.z += 0.003);
+  });
 
   return (
     <>
