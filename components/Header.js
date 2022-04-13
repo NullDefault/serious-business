@@ -27,7 +27,9 @@ export default function Header() {
       <Box px={6} py={1}>
         <Flex h={20} alignItems={"center"} justifyContent={"space-between"}>
           <Box h="90%">
-            <Logo />
+            <Link href="/" _focus={{}}>
+              <Logo />
+            </Link>
           </Box>
 
           <Flex alignItems={"center"}>
@@ -54,7 +56,7 @@ export default function Header() {
                 _hover={{
                   boxShadow:
                     "inset 200px 0 0 0 var(--chakra-colors-orange-400)",
-                  color: "white",
+                  color: useColorModeValue("white", "black"),
                 }}
               >
                 Contact Us
