@@ -1,41 +1,27 @@
 import {
   Box,
   Flex,
-  Avatar,
   Link,
   Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
   useDisclosure,
   useColorModeValue,
   Stack,
   useColorMode,
-  Center,
 } from "@chakra-ui/react";
 import Logo from "./aesthetics/dogIoLogo";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
-const NavLink = ({ children }) => (
-  <Link
-    px={2}
-    py={1}
-    rounded={"md"}
-    _hover={{
-      textDecoration: "none",
-      bg: useColorModeValue("gray.200", "gray.700"),
-    }}
-    href={"#"}
-  >
-    {children}
-  </Link>
-);
-
 export default function Header() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const linkStyles = {
+    py: 2,
+    px: 3,
+    _hover: {},
+    transition: "all ease 0.8s",
+  };
+
   return (
     <>
       <Box px={6} py={1}>
@@ -45,34 +31,43 @@ export default function Header() {
           </Box>
 
           <Flex alignItems={"center"}>
-            <Stack direction={"row"} spacing={7}>
-              <Button onClick={toggleColorMode}>
+            <Stack direction={"row"} spacing={8} fontSize="2xl">
+              <Link {...linkStyles} href="/products">
+                Products
+              </Link>
+              <Link {...linkStyles} href="/services">
+                Services
+              </Link>
+              <Link {...linkStyles} href="/testaments">
+                Testaments
+              </Link>
+              <Link {...linkStyles} href="/company">
+                Company
+              </Link>
+              <Link
+                {...linkStyles}
+                border="1px"
+                px={8}
+                borderColor={useColorModeValue("black", "white")}
+                href="/contact"
+                boxShadow="inset 0 0 0 0 --chakra-colors-yellow-400"
+                _hover={{
+                  boxShadow:
+                    "inset 200px 0 0 0 var(--chakra-colors-orange-400)",
+                  color: "white",
+                }}
+              >
+                Contact Us
+              </Link>
+              <Button
+                onClick={toggleColorMode}
+                variant="transparent"
+                alignSelf="center"
+                _focus={{}}
+                _hover={{ color: useColorModeValue("blue.400", "yellow.300") }}
+              >
                 {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
               </Button>
-
-              <Menu>
-                <MenuButton as={Button} cursor={"pointer"} minW={0}>
-                  Menu
-                </MenuButton>
-                <MenuList alignItems={"center"}>
-                  <br />
-                  <Center>
-                    <Avatar
-                      size={"2xl"}
-                      src={"https://avatars.dicebear.com/api/male/username.svg"}
-                    />
-                  </Center>
-                  <br />
-                  <Center>
-                    <p>Username</p>
-                  </Center>
-                  <br />
-                  <MenuDivider />
-                  <MenuItem>Your Servers</MenuItem>
-                  <MenuItem>Account Settings</MenuItem>
-                  <MenuItem>Logout</MenuItem>
-                </MenuList>
-              </Menu>
             </Stack>
           </Flex>
         </Flex>

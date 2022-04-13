@@ -33,7 +33,7 @@ export default function CallToActionWithIllustration() {
         </Heading>
         <Text
           color={useColorModeValue("gray.900", "gray.200")}
-          fontSize={{ base: "md", sm: "lg", md: "xl" }}
+          fontSize={{ base: "sm", sm: "md", md: "lg" }}
         >
           Do you enjoy the prestige of owning a living being, but hate{" "}
           <Text as={"span"} color={"blue.400"}>
