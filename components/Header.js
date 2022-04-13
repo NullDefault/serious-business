@@ -25,15 +25,21 @@ export default function Header() {
   return (
     <>
       <Box px={6} py={1}>
-        <Flex h={20} alignItems={"center"} justifyContent={"space-between"}>
-          <Box h="90%">
+        <Flex minH={20} alignItems={"center"} justifyContent={"space-between"}>
+          <Box h={20} display={{ base: "none", md: "block" }}>
             <Link href="/" _focus={{}}>
               <Logo />
             </Link>
           </Box>
 
-          <Flex alignItems={"center"}>
-            <Stack direction={"row"} spacing={8} fontSize="2xl">
+          <Flex alignItems={"center"} w={{ base: "full", md: "fit-content" }}>
+            <Stack
+              direction={{ base: "column", md: "row" }}
+              spacing={8}
+              fontSize="2xl"
+              w={{ base: "full", md: "fit-content" }}
+              align="center"
+            >
               <Link {...linkStyles} href="/products">
                 Products
               </Link>
