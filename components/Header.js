@@ -31,7 +31,13 @@ export default function Header() {
           <Box h={20} display={{ base: "none", md: "block" }}>
             <Link href="/" _focus={{}} _hover={{}}>
               <Flex h="full" justify="center" align="center">
-                <Logo p={1} />
+                <motion.div
+                  style={{ height: "100%" }}
+                  whileHover={{ rotate: 12 }}
+                >
+                  <Logo p={1} />
+                </motion.div>
+
                 <Text
                   color="orange.500"
                   fontWeight="extrabold"
@@ -80,8 +86,14 @@ export default function Header() {
                 Contact Us
               </Link>
               <motion.button
-                whileHover={{ scale: 1.1 }}
+                whileHover={{ scale: 1.1, rotate: 6 }}
                 whileTap={{ scale: 0.9 }}
+                transition={{
+                  type: "spring",
+                  damping: 10,
+                  mass: 0.75,
+                  stiffness: 100,
+                }}
                 onClick={toggleColorMode}
                 variant="transparent"
                 alignSelf="center"
