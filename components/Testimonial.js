@@ -116,7 +116,7 @@ export default function TestimonialWithSpeechBubbles() {
               <TestimonialText>
                 No more misbehaving fur babies for this gal! Whenever my
                 precious starts getting too naughty, I just put him in
-                neuro-locomotive time out. Five minutes later, and he's calm as
+                neuro-locomotive time out. Five minutes later, and he&apos;s calm as
                 ever!
               </TestimonialText>
             </TestimonialContent>
@@ -133,7 +133,7 @@ export default function TestimonialWithSpeechBubbles() {
               <TestimonialHeading>Fashionable and Current</TestimonialHeading>
               <TestimonialText>
                 My little furball has been the center of attention at every
-                party I've been to since I got him. A guaranteed conversation
+                party I&apos;ve been to since I got him. A guaranteed conversation
                 starter, you will always be the heart of the party with one of
                 these by your side!
               </TestimonialText>
