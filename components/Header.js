@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import Logo from "./aesthetics/dogIoLogo";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { motion } from "framer-motion";
 
 export default function Header() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -78,7 +79,9 @@ export default function Header() {
               >
                 Contact Us
               </Link>
-              <Button
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
                 onClick={toggleColorMode}
                 variant="transparent"
                 alignSelf="center"
@@ -86,7 +89,7 @@ export default function Header() {
                 _hover={{ color: useColorModeValue("blue.400", "yellow.300") }}
               >
                 {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-              </Button>
+              </motion.button>
             </Stack>
           </Flex>
         </Flex>
