@@ -4,7 +4,12 @@ export default function Products() {
   return (
     <>
       <Flex minH="30vh" align="center" justify="center">
-        <Flex justify="center" margin="auto" align="center">
+        <Flex
+          justify="center"
+          margin="auto"
+          align="center"
+          direction={{ base: "column", md: "row" }}
+        >
           <Image
             src="/Illustrations_Doggie.svg"
             alt="doggie fun"

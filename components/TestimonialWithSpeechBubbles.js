@@ -82,7 +82,7 @@ export default function TestimonialWithSpeechBubbles() {
   return (
     <Box>
       <Container maxW={"7xl"} py={16} as={Stack} spacing={12}>
-        <Stack spacing={0} align={"center"}>
+        <Stack spacing={0} align="center" textAlign="center">
           <Heading>Our Clients Speak</Heading>
           <Text>
             See what customers like you are saying about the future of pet
@@ -116,8 +116,8 @@ export default function TestimonialWithSpeechBubbles() {
               <TestimonialText>
                 No more misbehaving fur babies for this gal! Whenever my
                 precious starts getting too naughty, I just put him in
-                neuro-locomotive time out. Five minutes later, and he&apos;s calm as
-                ever!
+                neuro-locomotive time out. Five minutes later, and he&apos;s
+                calm as ever!
               </TestimonialText>
             </TestimonialContent>
             <TestimonialAvatar
@@ -133,9 +133,9 @@ export default function TestimonialWithSpeechBubbles() {
               <TestimonialHeading>Fashionable and Current</TestimonialHeading>
               <TestimonialText>
                 My little furball has been the center of attention at every
-                party I&apos;ve been to since I got him. A guaranteed conversation
-                starter, you will always be the heart of the party with one of
-                these by your side!
+                party I&apos;ve been to since I got him. A guaranteed
+                conversation starter, you will always be the heart of the party
+                with one of these by your side!
               </TestimonialText>
             </TestimonialContent>
             <TestimonialAvatar

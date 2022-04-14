@@ -1,9 +1,14 @@
 import { Flex, Image } from "@chakra-ui/react";
-import TestimonialWithSpeechBubbles from "../components/Testimonial";
+import TestimonialWithSpeechBubbles from "../components/TestimonialWithSpeechBubbles";
 
 export default function Testaments() {
   return (
-    <Flex minH="90vh" align="center" justify="center">
+    <Flex
+      minH="90vh"
+      align="center"
+      justify="center"
+      direction={{ base: "column-reverse", md: "row" }}
+    >
       <Image src="/Character_zombieing.svg" />
       <TestimonialWithSpeechBubbles />
     </Flex>
