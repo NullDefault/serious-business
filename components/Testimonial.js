@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 
 const Testimonial = ({ children }) => {
-  return <Box>{children}</Box>;
+  return <Box w="full">{children}</Box>;
 };
 
 const TestimonialContent = ({ children }) => {
@@ -84,7 +84,10 @@ export default function TestimonialWithSpeechBubbles() {
       <Container maxW={"7xl"} py={16} as={Stack} spacing={12}>
         <Stack spacing={0} align={"center"}>
           <Heading>Our Clients Speak</Heading>
-          <Text>We have been working with clients around the world</Text>
+          <Text>
+            See what customers like you are saying about the future of pet
+            ownership!
+          </Text>
         </Stack>
         <Stack
           direction={{ base: "column", md: "row" }}
@@ -92,50 +95,55 @@ export default function TestimonialWithSpeechBubbles() {
         >
           <Testimonial>
             <TestimonialContent>
-              <TestimonialHeading>Efficient Collaborating</TestimonialHeading>
+              <TestimonialHeading>My Pets Adore Me</TestimonialHeading>
               <TestimonialText>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
-                neque sed imperdiet nibh lectus feugiat nunc sem.
+                Since I am their only means of staying alive, and they are smart
+                enough to understand that, our relationship is a smooth as
+                butter!
               </TestimonialText>
             </TestimonialContent>
             <TestimonialAvatar
               src={
-                "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                "https://images.unsplash.com/photo-1648978147703-589308311049?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&q=80"
               }
-              name={"Jane Cooper"}
-              title={"CEO at ABC Corporation"}
+              name={"Ben Smith"}
+              title={"Doctor"}
             />
           </Testimonial>
           <Testimonial>
             <TestimonialContent>
-              <TestimonialHeading>Intuitive Design</TestimonialHeading>
+              <TestimonialHeading>Easy Discipline</TestimonialHeading>
               <TestimonialText>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
-                neque sed imperdiet nibh lectus feugiat nunc sem.
+                No more misbehaving fur babies for this gal! Whenever my
+                precious starts getting too naughty, I just put him in
+                neuro-locomotive time out. Five minutes later, and he's calm as
+                ever!
               </TestimonialText>
             </TestimonialContent>
             <TestimonialAvatar
               src={
-                "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                "https://images.unsplash.com/photo-1649541608577-d165ce8de13e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&q=80"
               }
               name={"Jane Cooper"}
-              title={"CEO at ABC Corporation"}
+              title={"Stay at home mother"}
             />
           </Testimonial>
           <Testimonial>
             <TestimonialContent>
-              <TestimonialHeading>Mindblowing Service</TestimonialHeading>
+              <TestimonialHeading>Fashionable and Current</TestimonialHeading>
               <TestimonialText>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
-                neque sed imperdiet nibh lectus feugiat nunc sem.
+                My little furball has been the center of attention at every
+                party I've been to since I got him. A guaranteed conversation
+                starter, you will always be the heart of the party with one of
+                these by your side!
               </TestimonialText>
             </TestimonialContent>
             <TestimonialAvatar
               src={
                 "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
               }
-              name={"Jane Cooper"}
-              title={"CEO at ABC Corporation"}
+              name={"Allison Bayer"}
+              title={"Psychiatrist"}
             />
           </Testimonial>
         </Stack>
