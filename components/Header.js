@@ -2,6 +2,7 @@ import {
   Box,
   Flex,
   Link,
+  Text,
   Button,
   useDisclosure,
   useColorModeValue,
@@ -27,8 +28,18 @@ export default function Header() {
       <Box px={6} py={1}>
         <Flex minH={20} alignItems={"center"} justifyContent={"space-between"}>
           <Box h={20} display={{ base: "none", md: "block" }}>
-            <Link href="/" _focus={{}}>
-              <Logo />
+            <Link href="/" _focus={{}} _hover={{}}>
+              <Flex h="full" justify="center" align="center">
+                <Logo p={1} />
+                <Text
+                  color="orange.500"
+                  fontWeight="extrabold"
+                  fontSize={{ base: "xl", md: "2xl", xl: "5xl" }}
+                  pl={6}
+                >
+                  Dog.io
+                </Text>
+              </Flex>
             </Link>
           </Box>
 
