@@ -96,7 +96,6 @@ export default function Header() {
                 }}
                 onClick={toggleColorMode}
                 variant="transparent"
-                alignSelf="center"
                 _focus={{}}
                 _hover={{ color: useColorModeValue("blue.400", "yellow.300") }}
               >

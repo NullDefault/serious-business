@@ -1,58 +1,80 @@
-import { Flex, Box, chakra, useColorModeValue, Image } from "@chakra-ui/react";
+import {
+  Flex,
+  Box,
+  chakra,
+  Container,
+  Grid,
+  GridItem,
+  useBreakpointValue,
+} from "@chakra-ui/react";
+import ModelViewer from "../components/aesthetics/3d/ModelViewer";
+import { ProductsHeader } from "../components/ProductsHeader";
+
+function GridItemWrapper({ big = false, children }) {
+  return (
+    <GridItem align="center">
+      <Container h="60vh" w="100%">
+        {children}
+      </Container>
+    </GridItem>
+  );
+}
 
 export default function Products() {
   return (
     <>
-      <Flex minH="30vh" align="center" justify="center">
-        <Flex
-          justify="center"
-          margin="auto"
-          align="center"
-          direction={{ base: "column", md: "row" }}
+      <ProductsHeader />
+      <Box minH="60vh">
+        <Grid
+          templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
+          gap={6}
         >
-          <Image
-            src="/Illustrations_Doggie.svg"
-            alt="doggie fun"
-            h={["200px", "300px"]}
-          />
-          <Box width="full" align="center">
-            <chakra.h3
-              fontWeight={"bold"}
-              fontSize={20}
-              textTransform={"uppercase"}
-              color={"purple.400"}
-            >
-              Find your new Best Friend
-            </chakra.h3>
-            <chakra.h1
-              py={5}
-              fontSize={48}
-              fontWeight={"bold"}
-              color={useColorModeValue("gray.700", "gray.50")}
-            >
-              Unique, Loving, and Dependent
-            </chakra.h1>
-            <chakra.h2
-              margin={"auto"}
-              width={"70%"}
-              fontWeight={"medium"}
-              color={useColorModeValue("gray.500", "gray.400")}
-            >
-              See why over{" "}
-              <chakra.strong color={useColorModeValue("gray.700", "gray.50")}>
-                150,000+
-              </chakra.strong>{" "}
-              influencers got their dog from us!
-            </chakra.h2>
-          </Box>
-          <Image
-            src="/Illustrations_dog-jump.svg"
-            alt="doggie fun"
-            h={["200px", "300px"]}
-          />
-        </Flex>
-      </Flex>
-      <Flex minH="60vh"></Flex>
+          <GridItemWrapper>
+            <ModelViewer
+              model="dumbdog"
+              scale={useBreakpointValue({ base: 0.05, md: 0.1, lg: 0.15 })}
+              position={[0, -12, 0]}
+              rotationAxes="y"
+            />
+          </GridItemWrapper>
+          <GridItemWrapper>
+            <Flex direction="column" justify="center" h="full">
+              <chakra.h1 fontSize={48} fontWeight={"bold"}>
+                Dumb Dog
+              </chakra.h1>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </Flex>
+          </GridItemWrapper>
+          <GridItemWrapper>
+            <Flex direction="column" justify="center" h="full">
+              <chakra.h1 fontSize={48} fontWeight={"bold"}>
+                Long Dog
+              </chakra.h1>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </Flex>
+          </GridItemWrapper>
+          <GridItemWrapper>
+            <ModelViewer
+              model="longdog"
+              scale={useBreakpointValue({ base: 0.4, md: 0.6, lg: 1 })}
+              rotation={[1.5, 0, 0]}
+              rotationAxes="y"
+            />
+          </GridItemWrapper>
+        </Grid>
+      </Box>
     </>
   );
 }
