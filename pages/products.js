@@ -10,7 +10,7 @@ import {
 import ModelViewer from "../components/aesthetics/3d/ModelViewer";
 import { ProductsHeader } from "../components/ProductsHeader";
 
-function GridItemWrapper({ big = false, children }) {
+function GridItemWrapper({ children }) {
   return (
     <GridItem align="center">
       <Container h="60vh" w="100%">
@@ -32,7 +32,7 @@ export default function Products() {
           <GridItemWrapper>
             <ModelViewer
               model="dumbdog"
-              scale={useBreakpointValue({ base: 0.05, md: 0.1, lg: 0.15 })}
+              scale={useBreakpointValue({ base: 0.1, lg: 0.15 })}
               position={[0, -12, 0]}
               rotationAxes="y"
             />
@@ -68,7 +68,7 @@ export default function Products() {
           <GridItemWrapper>
             <ModelViewer
               model="longdog"
-              scale={useBreakpointValue({ base: 0.4, md: 0.6, lg: 1 })}
+              scale={useBreakpointValue({ base: 0.6, lg: 1 })}
               rotation={[1.5, 0, 0]}
               rotationAxes="y"
             />
