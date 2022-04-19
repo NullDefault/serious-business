@@ -9,7 +9,7 @@ export default function Testaments() {
       justify="center"
       direction={{ base: "column-reverse", md: "row" }}
     >
-      <Image src="/Character_zombieing.svg" />
+      <Image boxSize="250px" src="/Character_zombieing.svg" />
       <TestimonialWithSpeechBubbles />
     </Flex>
   );
