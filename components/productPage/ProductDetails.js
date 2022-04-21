@@ -1,6 +1,16 @@
-import { chakra, useColorModeValue, Box, Link, Flex } from "@chakra-ui/react";
+import {
+  chakra,
+  useColorModeValue,
+  useDisclosure,
+  Box,
+  Link,
+  Flex,
+  Text,
+} from "@chakra-ui/react";
+import DetailModal from "./DetailModal";
 
 export default function ProductDetails({ title, body }) {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box py={12} px={2}>
       <chakra.h2
@@ -21,6 +31,12 @@ export default function ProductDetails({ title, body }) {
         {body}
       </chakra.p>
 
+      <Flex justify="space-between" p={8}>
+        <Box borderRadius="full" h="100px" w="100px" bg="gray.700" />
+        <Box borderRadius="full" h="100px" w="100px" bg="gray.600" />
+        <Box borderRadius="full" h="100px" w="100px" bg="gray.500" />
+      </Flex>
+      <Text>Recommended Accessories</Text>
       <Flex justify="space-around" mt={8}>
         <Link
           bg="teal.500"
@@ -43,9 +59,11 @@ export default function ProductDetails({ title, body }) {
           rounded="lg"
           _hover={{ bg: "gray.800" }}
           w="33%"
+          onClick={onOpen}
         >
           Find Out More
         </Link>
+        <DetailModal isOpen={isOpen} onClose={onClose} />
       </Flex>
     </Box>
   );
