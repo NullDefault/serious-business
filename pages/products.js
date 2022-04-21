@@ -1,72 +1,11 @@
-import {
-  Flex,
-  Box,
-  chakra,
-  Container,
-  Link,
-  Grid,
-  GridItem,
-  useBreakpointValue,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Flex, Box, Grid, useBreakpointValue } from "@chakra-ui/react";
 import ModelViewer from "../components/aesthetics/3d/ModelViewer";
-import { ProductsHeader } from "../components/ProductsHeader";
-
-function GridItemWrapper({ children }) {
-  return (
-    <GridItem align="center">
-      <Container h="650px" w="100%">
-        {children}
-      </Container>
-    </GridItem>
-  );
-}
-
-function ColumnItemWrapper({ children }) {
-  return (
-    <Container w="100%" h="400px">
-      {children}
-    </Container>
-  );
-}
-
-function ProductDetails({ title, body }) {
-  return (
-    <Box py={12} px={2}>
-      <chakra.h2
-        fontSize={{ base: "4xl", md: "5xl" }}
-        color={useColorModeValue("gray.800", "white")}
-        fontWeight="bold"
-      >
-        <chakra.span color={useColorModeValue("purple.600", "purple.400")}>
-          {title.slice(0, 4)}
-        </chakra.span>
-        {title.slice(4, 8)}
-      </chakra.h2>
-      <chakra.p
-        mt={4}
-        fontSize={{ base: "lg", md: "2xl" }}
-        color={useColorModeValue("gray.600", "gray.400")}
-      >
-        {body}
-      </chakra.p>
-
-      <Box mt={8}>
-        <Link
-          bg="gray.900"
-          color="gray.100"
-          px={5}
-          py={3}
-          fontWeight="semibold"
-          rounded="lg"
-          _hover={{ bg: "gray.800" }}
-        >
-          Become Best Friends
-        </Link>
-      </Box>
-    </Box>
-  );
-}
+import { ProductsHeader } from "../components/productPage/ProductsHeader";
+import {
+  ColumnItemWrapper,
+  GridItemWrapper,
+} from "../components/productPage/Wrappers";
+import ProductDetails from "../components/productPage/ProductDetails";
 
 export default function Products() {
   const renderAsColumn = useBreakpointValue({ base: true, md: false });
