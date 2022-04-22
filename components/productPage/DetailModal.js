@@ -15,7 +15,7 @@ import Carousel from "../Carousel";
 
 export default function DetailModal(props) {
   let slides = [
-    <Flex>
+    <Flex key="slide-1">
       <Image
         boxSize="xl"
         w="70%"
@@ -35,7 +35,7 @@ export default function DetailModal(props) {
         corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
       </Text>
     </Flex>,
-    <Flex>
+    <Flex key="slide-2">
       <Image
         boxSize="xl"
         w="70%"
