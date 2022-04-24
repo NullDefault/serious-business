@@ -1,8 +1,8 @@
 import { Flex, Box, chakra, useColorModeValue, Image } from "@chakra-ui/react";
 
-export function ProductsHeader() {
+export default function ProductsHeader() {
   return (
-    <Flex minH="10vh" align="center" justify="center">
+    <Flex align="center" justify="center" pt={4}>
       <Flex
         justify="center"
         margin="auto"
@@ -12,7 +12,7 @@ export function ProductsHeader() {
         <Image
           src="/Illustrations_Doggie.svg"
           alt="doggie fun"
-          h={["175px", "250px"]}
+          h={["125px", "175px"]}
         />
         <Box width="full" align="center">
           <chakra.h3
@@ -25,6 +25,7 @@ export function ProductsHeader() {
           </chakra.h3>
           <chakra.h1
             py={5}
+            px={6}
             fontSize={48}
             fontWeight={"bold"}
             color={useColorModeValue("gray.700", "gray.50")}
@@ -47,7 +48,7 @@ export function ProductsHeader() {
         <Image
           src="/Illustrations_dog-jump.svg"
           alt="doggie fun"
-          h={["175px", "250px"]}
+          h={["125px", "175px"]}
         />
       </Flex>
     </Flex>

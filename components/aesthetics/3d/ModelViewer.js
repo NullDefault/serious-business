@@ -13,7 +13,12 @@ const ModelViewer = ({
   rotationAxes = [],
 }) => {
   return (
-    <Canvas>
+    <Canvas
+      style={{
+        minHeight: "600px",
+        minWidth: "600px",
+      }}
+    >
       <ambientLight intensity={0.3} />
       <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
       <pointLight position={[-10, -10, -10]} />

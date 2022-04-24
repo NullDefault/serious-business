@@ -1,15 +1,15 @@
-import { Flex, Box, Grid, Text, useBreakpointValue } from "@chakra-ui/react";
-import ModelViewer from "../components/aesthetics/3d/ModelViewer";
-import { ProductsHeader } from "../components/productPage/ProductsHeader";
 import {
-  ColumnItemWrapper,
-  GridItemWrapper,
-} from "../components/productPage/Wrappers";
+  Flex,
+  Box,
+  Container,
+  Text,
+  useBreakpointValue,
+} from "@chakra-ui/react";
+import ModelViewer from "../components/aesthetics/3d/ModelViewer";
+import ProductsHeader from "../components/productPage/ProductsHeader";
 import ProductDetails from "../components/productPage/ProductDetails";
 
 export default function Products() {
-  const renderAsColumn = useBreakpointValue({ base: true, md: false });
-
   const dogs = [
     {
       title: "Dumb Dog",
@@ -46,73 +46,36 @@ export default function Products() {
     <>
       <ProductsHeader />
       <Box minH="60vh">
-        {renderAsColumn ? (
-          <Flex direction="column" py={10}>
-            {dogs.map((dogData, index) => {
-              return [
-                <ColumnItemWrapper key={"dog" + { index } + "-model"}>
-                  <ModelViewer
-                    model={dogData.model}
-                    scale={dogData.scale}
-                    position={dogData.position}
-                    rotation={dogData.rotation}
-                    rotationAxes="y"
-                  />
-                </ColumnItemWrapper>,
-                <ColumnItemWrapper key={"dog" + { index } + "-text"}>
-                  <ProductDetails
-                    title={dogData.title}
-                    body={dogData.description}
-                  />
-                </ColumnItemWrapper>,
-              ];
-            })}
-          </Flex>
-        ) : (
-          <Grid
-            templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
-            gap={10}
-            pb={24}
-          >
-            {dogs.map((dogData, index) => {
-              return index % 2 == 0
-                ? [
-                    <GridItemWrapper key={"dog" + { index } + "-model"}>
-                      <ModelViewer
-                        model={dogData.model}
-                        scale={dogData.scale}
-                        position={dogData.position}
-                        rotation={dogData.rotation}
-                        rotationAxes="y"
-                      />
-                    </GridItemWrapper>,
-                    <GridItemWrapper key={"dog" + { index } + "-text"}>
-                      <ProductDetails
-                        title={dogData.title}
-                        body={dogData.description}
-                      />
-                    </GridItemWrapper>,
-                  ]
-                : [
-                    <GridItemWrapper key={"dog" + { index } + "-text"}>
-                      <ProductDetails
-                        title={dogData.title}
-                        body={dogData.description}
-                      />
-                    </GridItemWrapper>,
-                    <GridItemWrapper key={"dog" + { index } + "-model"}>
-                      <ModelViewer
-                        model={dogData.model}
-                        scale={dogData.scale}
-                        position={dogData.position}
-                        rotation={dogData.rotation}
-                        rotationAxes="y"
-                      />
-                    </GridItemWrapper>,
-                  ];
-            })}
-          </Grid>
-        )}
+        <Flex direction="column" py={10}>
+          {dogs.map((dogData, index) => {
+            let model = (
+              <ModelViewer
+                model={dogData.model}
+                scale={dogData.scale}
+                position={dogData.position}
+                rotation={dogData.rotation}
+                rotationAxes="y"
+              />
+            );
+            let details = (
+              <Box maxW="container.md">
+                <ProductDetails
+                  title={dogData.title}
+                  body={dogData.description}
+                />
+              </Box>
+            );
+            return (
+              <Container
+                display="flex"
+                maxW="80vw"
+                key={"dog-container-" + index}
+              >
+                {index % 2 == 0 ? [model, details] : [details, model]}
+              </Container>
+            );
+          })}
+        </Flex>
         <Text align="center" h="15vh" fontSize="3xl" color="whatsapp.600">
           More coming soon!
         </Text>
