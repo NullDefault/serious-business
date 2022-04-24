@@ -15,14 +15,12 @@ import Carousel from "../Carousel";
 
 export default function DetailModal(props) {
   let slides = [
-    <Flex key="slide-1">
+    <Flex key="slide-1" direction={{ base: "column", md: "row" }}>
       <Image
-        boxSize="xl"
-        w="70%"
-        pr={4}
+        objectFit="contain"
         src="https://www.treehugger.com/thmb/XuoUZ9hFh08TtrXVJ0iPNNwLmow=/1000x562/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__mnn__images__2019__03__senior_man_walking_dog-adf3819af0cb4a3f93a0cea5387fd5e6.jpg"
       />
-      <Text w="30%">
+      <Text p={8}>
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem
         accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
         illo inventore veritatis et quasi architecto beatae vitae dicta sunt
@@ -35,14 +33,12 @@ export default function DetailModal(props) {
         corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
       </Text>
     </Flex>,
-    <Flex key="slide-2">
+    <Flex key="slide-2" direction={{ base: "column", md: "row" }}>
       <Image
-        boxSize="xl"
-        w="70%"
-        pr={4}
+        objectFit="contain"
         src="https://www.treehugger.com/thmb/XuoUZ9hFh08TtrXVJ0iPNNwLmow=/1000x562/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__mnn__images__2019__03__senior_man_walking_dog-adf3819af0cb4a3f93a0cea5387fd5e6.jpg"
       />
-      <Text w="35%">
+      <Text p={8}>
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem
         accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
         illo inventore veritatis et quasi architecto beatae vitae dicta sunt

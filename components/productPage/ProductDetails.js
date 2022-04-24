@@ -32,7 +32,7 @@ export default function ProductDetails({ title, body }) {
         {body}
       </chakra.p>
 
-      <Flex justify="end" align="center" p={8}>
+      <Flex justify="end" align="center" py={8}>
         <IconButton
           disabled
           variant="outline"
