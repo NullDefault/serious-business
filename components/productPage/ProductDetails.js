@@ -18,10 +18,9 @@ export default function ProductDetails({ title, body }) {
         color={useColorModeValue("gray.800", "white")}
         fontWeight="bold"
       >
-        <chakra.span color={useColorModeValue("purple.600", "purple.400")}>
-          {title.slice(0, 4)}
+        <chakra.span color={useColorModeValue("orange.600", "orange.400")}>
+          {title}
         </chakra.span>
-        {title.slice(4, 8)}
       </chakra.h2>
       <chakra.p
         mt={4}

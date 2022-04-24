@@ -1,4 +1,4 @@
-import { Flex, Box, Grid, useBreakpointValue } from "@chakra-ui/react";
+import { Flex, Box, Grid, Text, useBreakpointValue } from "@chakra-ui/react";
 import ModelViewer from "../components/aesthetics/3d/ModelViewer";
 import { ProductsHeader } from "../components/productPage/ProductsHeader";
 import {
@@ -29,6 +29,15 @@ export default function Products() {
       mobility scooter-compatible hip joints, this miracle of biological sciences can't wait to become your favourite source of entertainment.`,
       model: "longdog",
       scale: useBreakpointValue({ base: 0.6, lg: 1 }),
+      rotation: [1.5, 0, 0],
+    },
+    {
+      title: "Foldy Dog",
+      description: `Referred to by critics as Pug 2.0, everything about this dog is next-gen. Permanent puppy eyes that protrude from the skull,
+      a near-incapacity for independent breath, and a goofy adorable face are just some of the amazing features for you to discover.
+      Make sure to take advantage of our must-have accessory bundle (guaranteed to raise life expectancy by an average of 7.2 years)!`,
+      model: "foldydog",
+      scale: useBreakpointValue({ base: 0.6, lg: 1.25 }),
       rotation: [1.5, 0, 0],
     },
   ];
@@ -66,7 +75,7 @@ export default function Products() {
             pb={24}
           >
             {dogs.map((dogData, index) => {
-              return index / 2 == 0
+              return index % 2 == 0
                 ? [
                     <GridItemWrapper key={"dog" + { index } + "-model"}>
                       <ModelViewer
@@ -104,6 +113,9 @@ export default function Products() {
             })}
           </Grid>
         )}
+        <Text align="center" h="15vh" fontSize="3xl" color="whatsapp.600">
+          More coming soon!
+        </Text>
       </Box>
     </>
   );

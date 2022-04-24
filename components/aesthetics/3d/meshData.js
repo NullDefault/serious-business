@@ -15,7 +15,12 @@ const meshData = {
       material: materials["(null)"],
     };
   },
+  foldydog: (nodes, materials) => {
+    return {
+      geometry: nodes["uploads_files_2822734_pose+pup"].geometry,
+      material: materials["Default OBJ"],
+    };
+  },
 };
 
 export default meshData;
- 

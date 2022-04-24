@@ -3,7 +3,7 @@ import { GridItem, Container } from "@chakra-ui/react";
 function GridItemWrapper({ children }) {
   return (
     <GridItem align="center">
-      <Container h="650px" w="100%">
+      <Container h="700px" w="100%">
         {children}
       </Container>
     </GridItem>
@@ -12,7 +12,7 @@ function GridItemWrapper({ children }) {
 
 function ColumnItemWrapper({ children }) {
   return (
-    <Container w="100%" h="400px">
+    <Container w="100%" h="600px">
       {children}
     </Container>
   );
