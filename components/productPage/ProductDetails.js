@@ -31,9 +31,24 @@ export default function ProductDetails({ title, body }) {
       </chakra.p>
 
       <Flex justify="space-between" p={8}>
-        <Box borderRadius="full" h="100px" w="100px" bg="gray.700" />
-        <Box borderRadius="full" h="100px" w="100px" bg="gray.600" />
-        <Box borderRadius="full" h="100px" w="100px" bg="gray.500" />
+        <Box
+          borderRadius="full"
+          h={{ base: "50px", md: "100px" }}
+          w={{ base: "50px", md: "100px" }}
+          bg="gray.700"
+        />
+        <Box
+          borderRadius="full"
+          h={{ base: "50px", md: "100px" }}
+          w={{ base: "50px", md: "100px" }}
+          bg="gray.600"
+        />
+        <Box
+          borderRadius="full"
+          h={{ base: "50px", md: "100px" }}
+          w={{ base: "50px", md: "100px" }}
+          bg="gray.500"
+        />
       </Flex>
       <Text>Recommended Accessories</Text>
       <Flex justify="space-around" mt={8}>
