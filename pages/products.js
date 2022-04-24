@@ -1,4 +1,5 @@
 import {
+  chakra,
   Flex,
   Box,
   Container,
@@ -72,10 +73,27 @@ export default function Products() {
                 maxW={{ base: "90vw", md: "85vw" }}
                 key={"dog-container-" + index}
                 flexDirection={{ base: "column", xl: "row" }}
+                position="relative"
+                mb={24}
               >
                 {renderAsColumn || index % 2 == 0
                   ? [model, details]
                   : [details, model]}
+                <Box
+                  transition="all 300ms ease-out"
+                  opacity={0.42}
+                  style={{
+                    backdropFilter: "blur(10px) contrast(200%)",
+                  }}
+                  borderRadius={20}
+                  backgroundImage="linear-gradient(to top, #dfe6e9 0%, white 100%)"
+                  shadow="sm"
+                  w="100%"
+                  h="100%"
+                  position="absolute"
+                  left={0}
+                  zIndex={-1}
+                ></Box>
               </Container>
             );
           })}

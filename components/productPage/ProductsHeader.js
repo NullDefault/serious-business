@@ -12,7 +12,7 @@ export default function ProductsHeader() {
         <Image
           src="/Illustrations_Doggie.svg"
           alt="doggie fun"
-          h={["125px", "175px"]}
+          h={["125px", "150px"]}
         />
         <Box width="full" align="center">
           <chakra.h3
@@ -24,7 +24,7 @@ export default function ProductsHeader() {
             Find your new Best Friend
           </chakra.h3>
           <chakra.h1
-            py={5}
+            py={4}
             px={6}
             fontSize={48}
             fontWeight={"bold"}
@@ -48,7 +48,7 @@ export default function ProductsHeader() {
         <Image
           src="/Illustrations_dog-jump.svg"
           alt="doggie fun"
-          h={["125px", "175px"]}
+          h={["125px", "150px"]}
         />
       </Flex>
     </Flex>

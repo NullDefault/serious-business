@@ -22,7 +22,7 @@ const ModelViewer = ({
     >
       <ambientLight intensity={0.3} />
       <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-      <pointLight position={[-10, -10, -10]} />
+      <pointLight position={[-8, -2, -10]} />
       <Suspense fallback={null}>
         <GltfModel
           model={model}

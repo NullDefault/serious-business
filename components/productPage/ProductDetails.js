@@ -18,40 +18,33 @@ export default function ProductDetails({ title, body }) {
         color={useColorModeValue("gray.800", "white")}
         fontWeight="bold"
       >
-        <chakra.span color={useColorModeValue("orange.600", "orange.400")}>
+        <chakra.span color={useColorModeValue("orange.600", "orange.200")}>
           {title}
         </chakra.span>
       </chakra.h2>
       <chakra.p
         mt={4}
         fontSize={{ base: "lg", md: "xl" }}
-        color={useColorModeValue("gray.600", "gray.400")}
+        color={useColorModeValue("gray.600", "gray.200")}
       >
         {body}
       </chakra.p>
 
-      <Flex justify="space-between" p={8}>
-        <Box
-          borderRadius="full"
-          h={{ base: "50px", md: "100px" }}
-          w={{ base: "50px", md: "100px" }}
-          bg="gray.700"
-        />
-        <Box
-          borderRadius="full"
-          h={{ base: "50px", md: "100px" }}
-          w={{ base: "50px", md: "100px" }}
-          bg="gray.600"
-        />
-        <Box
-          borderRadius="full"
-          h={{ base: "50px", md: "100px" }}
-          w={{ base: "50px", md: "100px" }}
-          bg="gray.500"
-        />
+      <Flex justify="end" p={8}>
+        {[1, 2, 3].map(() => {
+          return (
+            <Box
+              borderRadius="full"
+              h={{ base: "50px", md: "100px" }}
+              w={{ base: "50px", md: "100px" }}
+              bg="gray.700"
+              mr={4}
+            />
+          );
+        })}
       </Flex>
-      <Text>Recommended Accessories</Text>
-      <Flex justify="space-around" mt={8}>
+      <Text align="right">Recommended Accessories</Text>
+      <Flex justify="start" mt={8}>
         <Link
           bg="teal.500"
           color="gray.100"
@@ -60,7 +53,7 @@ export default function ProductDetails({ title, body }) {
           fontWeight="semibold"
           rounded="lg"
           _hover={{ bg: "gray.800" }}
-          w="66%"
+          mr={4}
         >
           Get Started
         </Link>
@@ -72,7 +65,6 @@ export default function ProductDetails({ title, body }) {
           fontWeight="semibold"
           rounded="lg"
           _hover={{ bg: "gray.800" }}
-          w="33%"
           onClick={onOpen}
         >
           Find Out More
