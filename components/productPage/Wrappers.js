@@ -12,7 +12,7 @@ function GridItemWrapper({ children }) {
 
 function ColumnItemWrapper({ children }) {
   return (
-    <Container w="100%" minH="800px" h="fit-content">
+    <Container w="100%" h="800px">
       {children}
     </Container>
   );
