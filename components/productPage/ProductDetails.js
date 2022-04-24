@@ -6,7 +6,9 @@ import {
   Link,
   Flex,
   Text,
+  IconButton,
 } from "@chakra-ui/react";
+import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 import DetailModal from "./DetailModal";
 
 export default function ProductDetails({ title, body }) {
@@ -30,10 +32,19 @@ export default function ProductDetails({ title, body }) {
         {body}
       </chakra.p>
 
-      <Flex justify="end" p={8}>
-        {[1, 2, 3].map(() => {
+      <Flex justify="end" align="center" p={8}>
+        <IconButton
+          disabled
+          variant="outline"
+          rounded="full"
+          mr={4}
+          fontSize="4xl"
+          icon={<IoIosArrowDropleft />}
+        />
+        {[1, 2, 3].map(({ el, index }) => {
           return (
             <Box
+              key={"recommended-accessory-" + index + "for-" + title}
               borderRadius="full"
               h={{ base: "50px", md: "100px" }}
               w={{ base: "50px", md: "100px" }}
@@ -42,6 +53,13 @@ export default function ProductDetails({ title, body }) {
             />
           );
         })}
+        <IconButton
+          disabled
+          variant="outline"
+          rounded="full"
+          fontSize="4xl"
+          icon={<IoIosArrowDropright />}
+        />
       </Flex>
       <Text align="right">Recommended Accessories</Text>
       <Flex justify="start" mt={8}>
