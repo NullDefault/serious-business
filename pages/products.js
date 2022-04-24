@@ -68,8 +68,9 @@ export default function Products() {
             return (
               <Container
                 display="flex"
-                maxW="80vw"
+                maxW={{ base: "90vw", md: "85vw" }}
                 key={"dog-container-" + index}
+                direction={{ base: "column", md: "row" }}
               >
                 {index % 2 == 0 ? [model, details] : [details, model]}
               </Container>
