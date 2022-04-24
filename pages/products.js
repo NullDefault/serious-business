@@ -10,6 +10,7 @@ import ProductsHeader from "../components/productPage/ProductsHeader";
 import ProductDetails from "../components/productPage/ProductDetails";
 
 export default function Products() {
+  const renderAsColumn = useBreakpointValue({ base: true, md: false });
   const dogs = [
     {
       title: "Dumb Dog",
@@ -18,7 +19,7 @@ export default function Products() {
       its silly wobbly gait, there's little more we could have done to improve man's best friend! Get started
       today for a one-time bonus of 4 (!) free knee joint replacements.`,
       model: "dumbdog",
-      scale: useBreakpointValue({ base: 0.1, lg: 0.15 }),
+      scale: 0.15,
       position: [0, -12, 0],
     },
     {
@@ -28,7 +29,7 @@ export default function Products() {
       of 21st century veterinary gene-manipulation. Featuring a state-of-the-art lifespan-to-length ratio, and revolutionary
       mobility scooter-compatible hip joints, this miracle of biological sciences can't wait to become your favourite source of entertainment.`,
       model: "longdog",
-      scale: useBreakpointValue({ base: 0.6, lg: 1 }),
+      scale: 1,
       rotation: [1.5, 0, 0],
     },
     {
@@ -37,7 +38,7 @@ export default function Products() {
       a near-incapacity for independent breath, and a goofy adorable face are just some of the amazing features for you to discover.
       Make sure to take advantage of our must-have accessory bundle (guaranteed to raise life expectancy by an average of 7.2 years)!`,
       model: "foldydog",
-      scale: useBreakpointValue({ base: 0.6, lg: 1.25 }),
+      scale: 1.25,
       rotation: [1.5, 0, 0],
     },
   ];
@@ -70,9 +71,11 @@ export default function Products() {
                 display="flex"
                 maxW={{ base: "90vw", md: "85vw" }}
                 key={"dog-container-" + index}
-                direction={{ base: "column", md: "row" }}
+                flexDirection={{ base: "column", xl: "row" }}
               >
-                {index % 2 == 0 ? [model, details] : [details, model]}
+                {renderAsColumn || index % 2 == 0
+                  ? [model, details]
+                  : [details, model]}
               </Container>
             );
           })}

@@ -1,4 +1,5 @@
 import React, { Suspense } from "react";
+import { useBreakpointValue } from "@chakra-ui/react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import GltfModel from "./GltfModel";
@@ -15,8 +16,8 @@ const ModelViewer = ({
   return (
     <Canvas
       style={{
-        minHeight: "600px",
-        minWidth: "600px",
+        minHeight: useBreakpointValue({ base: "300px", lg: "600px" }),
+        minWidth: useBreakpointValue({ base: "300px", lg: "600px" }),
       }}
     >
       <ambientLight intensity={0.3} />
