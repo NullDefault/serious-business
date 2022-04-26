@@ -7,11 +7,24 @@ import {
   Flex,
   Text,
   IconButton,
+  Image,
 } from "@chakra-ui/react";
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 import DetailModal from "./DetailModal";
 
-export default function ProductDetails({ title, body }) {
+export default function ProductDetails({ title, body, slideData }) {
+  let slides = slideData.map((slideData, index) => {
+    return (
+      <Flex
+        key={"slide-" + index + "-" + title}
+        direction={{ base: "column", md: "row" }}
+      >
+        <Image objectFit="contain" src={slideData.imgSrc} />
+        <Text p={8}>{slideData.text}</Text>
+      </Flex>
+    );
+  });
+
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box py={12} px={2}>
@@ -87,7 +100,7 @@ export default function ProductDetails({ title, body }) {
         >
           Find Out More
         </Link>
-        <DetailModal isOpen={isOpen} onClose={onClose} />
+        <DetailModal isOpen={isOpen} onClose={onClose} slides={slides} />
       </Flex>
     </Box>
   );

@@ -22,6 +22,9 @@ export default function Products() {
       model: "dumbdog",
       scale: 0.15,
       position: [0, -12, 0],
+      detailSlides: [
+        { imgSrc: "/dumbdog_on_walk.png", text: "Enjoying the outside!" },
+      ],
     },
     {
       title: "Long Dog",
@@ -32,6 +35,12 @@ export default function Products() {
       model: "longdog",
       scale: 1,
       rotation: [1.5, 0, 0],
+      detailSlides: [
+        {
+          imgSrc: "longdog_wheeling_by.png",
+          text: "Look at how fast he's going! Wheelin' on by!",
+        },
+      ],
     },
     {
       title: "Foldy Dog",
@@ -41,6 +50,12 @@ export default function Products() {
       model: "foldydog",
       scale: 1.25,
       rotation: [1.5, 0, 0],
+      detailSlides: [
+        {
+          imgSrc: "/foldydog_enjoying_outside.png",
+          text: "Enjoying the fresh air!",
+        },
+      ],
     },
   ];
 
@@ -64,6 +79,7 @@ export default function Products() {
                 <ProductDetails
                   title={dogData.title}
                   body={dogData.description}
+                  slideData={dogData.detailSlides}
                 />
               </Box>
             );
