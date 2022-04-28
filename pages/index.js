@@ -19,6 +19,7 @@ export default function Home() {
         links={[
           <Link
             href="/products"
+            key="disruption-link-1"
             py={2}
             px={4}
             bg={"blue.400"}
@@ -30,6 +31,7 @@ export default function Home() {
           </Link>,
           <Link
             href="company"
+            key="disruption-link-2"
             py={2}
             px={4}
             bg={"whiteAlpha.300"}
